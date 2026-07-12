@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillMatch Web - Comparador de Compatibilidade para Vagas Front-End</title>
+    <meta name="description"
+        content="SkillMatch Web é uma aplicação que compara as habilidades de um candidato com vagas de Front-End, mostrando a compatibilidade e sugerindo recomendações de estudo.">
+    <link rel="stylesheet" href="./assets/styles/index.style.css">
+    </head>
+
+<body>
+    <header>
+        <img src="./assets/img/logo.svg" alt="Logo SkillMatch Web" width="300" height="100">
+        <h1>Skillmatch Web</h1>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#formulario">Formulário</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Bem-Vindo ao SkillMatch / Encontre a Vaga Ideal!</h2>
+
+        </section>
+
+        <section id="formulario">
+            <h2>Formulário do Candidato</h2>
+            <form class="formContainer">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+                <label for="area">Área:</label>
+                <select id="area" name="area" required>
+                    <option value="" disabled selected hidden>Selecione uma Opção:</option>
+                    <option value="front-end">Front-End</option>
+                    <option value="back-end">Back-End</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="fullstack">Fullstack</option>
+                </select>
+
+                <fieldset>
+                    <legend>Marque suas habilidades:</legend>
+                <div class="checkbox-styles">
+                <input type="checkbox" id="javascript" name="javascript" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="github" name="github" value="GitHub">
+                <label for="github">GitHub</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="logProg" name="logProg" value="Lógica de Programação">
+                <label for="logProg">Lógica de Programação</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="kanban" name="kanban" value="Kanban">
+                <label for="kanban">Kanban</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="react" name="react" value="React">
+                <label for="react">React</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="arrays" name="arrays" value="Arrays">
+                <label for="arrays">Arrays</label>
+                </div>
+
+                <div class="checkbox-styles">
+                <input type="checkbox" id="objetos" name="objetos" value="Objetos">
+                <label for="objetos">Objetos</label>
+                </div>
+                
+                <div class="checkbox-styles">
+                <input type="checkbox" id="funcoes" name="funcoes" value="Funções">
+                <label for="funcoes">Funções</label>
+                </div>
+                </fieldset>
+
+                <label for="experienciaMeses">Mês(es)</label>
+                <input type="number" id="experienciaMeses" name="experienciaMeses"/>
+
+                <button type="submit">Enviar minha candidatura</button>
+                <div aria-live="polite" id="status-formulario"></div>
+            </form>
+
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados das Vagas</h2>
+            <div aria-live="polite" id="status-mensagem"></div>
+            <div id="lista-vagas"></div>
+
+
+            <h3>Melhor Vaga</h3>
+            <div id="melhor-vaga-conteudo"></div>
+
+
+
+            <h3>Recomendacao de Estudo</h3>
+            <div id="recomendacao-conteudo"></div>
+
+
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>O SkillMatch Web compara as habilidades de um candidato com os requisitos de vagas Front-End, apresentando o percentual de compatibilidade e recomendações de estudo.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Thiago Slongo.</p>
+    </footer>
+    <script type="module" src="./assets/scripts/main.js"></script>
+</body>
+
+</html>
