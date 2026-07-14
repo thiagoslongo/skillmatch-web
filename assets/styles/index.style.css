@@ -1,0 +1,201 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+img {
+    width: 220px;
+    height: auto;
+    margin: 20px 0;
+}
+
+li  {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1rem;
+    background-color: rgb(245, 213, 31);
+    padding: 12px 16px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.formContainer {
+    margin-top: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid rgb(245, 213, 31);
+    border-radius: 8px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid rgb(245, 213, 31);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: rgb(245, 213, 31);
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .2s;
+}
+
+button:hover {
+  background-color: rgb(245, 195, 31);
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid rgb(245, 213, 31);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    border: 1px solid rgb(245, 213, 31);
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 20px;        
+}
+
+legend {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.checkbox-styles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: calc(50% - 10px);
+}
+
+.checkbox-styles input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: rgb(245, 213, 31);
+}
+
+input[type="number"] {
+    width: 180px;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid rgb(245, 213, 31);
+    border-radius: 4px;
+}
+
+.nomeHome {
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#lista-vagas,
+#melhor-vaga-conteudo,
+#recomendacao-conteudo {
+    margin-top: 15px;
+}
+
+#sobre p {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+}
+    
+@media (min-width: 1024px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
