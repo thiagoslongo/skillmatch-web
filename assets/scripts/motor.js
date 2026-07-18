@@ -95,7 +95,7 @@ class VagaFrontEnd extends Vaga {
 
 
 
-// dados de teste - remover antes da entrega final
+// TODO: dados de teste - remover antes da entrega final
 const vagaTeste = new Vaga('NewTech', 'Dev Jr', ['JavaScript', 'GitHub'], 2700, 'Remoto');
 const vagaTeste1 = new Vaga('JockPower', 'Fullstack', ['JavaScript', 'Kanban'], 3000, 'Presencial');
 const vagaTeste2 = new Vaga('NextSolutions', 'Programador Front-End', ['JavaScript', 'Arrays', 'Objetos', 'Funções'], 3500, 'Híbrido');
