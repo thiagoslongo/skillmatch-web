@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "empresa": "Tech Solutions",
+    "cargo": "Desenvolvedor Front-End Júnior",
+    "requisitos": ["HTML", "CSS", "JavaScript", "Git"],
+    "salario": 3500,
+    "modalidade": "Remoto",
+    "nivelMinimo": "Junior"
+  },
+  {
+    "id": 2,
+    "empresa": "Inova Sistemas",
+    "cargo": "Desenvolvedor Full Stack Júnior",
+    "requisitos": ["JavaScript", "Node.js", "SQL", "Git"],
+    "salario": 4500,
+    "modalidade": "Híbrido"
+  },
+  {
+    "id": 3,
+    "empresa": "Code Factory",
+    "cargo": "Desenvolvedor Front-End Sênior",
+    "requisitos": ["JavaScript", "React", "CSS", "Git"],
+    "salario": 5000,
+    "modalidade": "Presencial",
+    "nivelMinimo": "Senior"
+  },
+  {
+    "id": 4,
+    "empresa": "Digital Soft",
+    "cargo": "Desenvolvedor Back-End Júnior",
+    "requisitos": ["Node.js", "Express", "SQL", "Git"],
+    "salario": 4200,
+    "modalidade": "Remoto"
+  },
+  {
+    "id": 5,
+    "empresa": "NextCode",
+    "cargo": "Desenvolvedor Front-End Pleno",
+    "requisitos": ["HTML", "CSS", "JavaScript", "React", "Git"],
+    "salario": 6500,
+    "modalidade": "Híbrido",
+    "nivelMinimo": "Pleno"
+  },
+  {
+    "id": 6,
+    "empresa": "CloudWare",
+    "cargo": "Desenvolvedor Back-End Pleno",
+    "requisitos": ["Node.js", "Express", "SQL", "Docker", "Git"],
+    "salario": 7000,
+    "modalidade": "Remoto"
+  }
+]
