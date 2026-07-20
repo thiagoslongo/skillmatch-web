@@ -12,10 +12,10 @@ class Vaga {
     }
 
     calcularCompatibilidade(candidato) {
-        const comparaHabilidades = candidato.habilidades.filter(habilidades => this.requisitos.includes(habilidades));
+        const habilidadesEncontradas = candidato.habilidades.filter(habilidades => this.requisitos.includes(habilidades));
         const habilidadesFaltantes = this.requisitos.filter(requisitos => !candidato.habilidades.includes(requisitos));
 
-        const qtdeRequiAtend = comparaHabilidades.length;
+        const qtdeRequiAtend = habilidadesEncontradas.length;
         const totalReqVaga = this.requisitos.length;
         const compatibilidade = (qtdeRequiAtend / totalReqVaga) * 100;
 
@@ -31,7 +31,7 @@ class Vaga {
             classificacao = 'Baixa Compatibilidade 0-49%'
         }
 
-        return { compatibilidade: compatibilidade, qtdeRequiAtend, habilidadesFaltantes, classificacao };
+        return { compatibilidade: compatibilidade, qtdeRequiAtend, habilidadesFaltantes, classificacao, habilidadesEncontradas };
     }
 
     exibirResumo() {
@@ -96,13 +96,17 @@ class VagaFrontEnd extends Vaga {
 
 
 // TODO: dados de teste - remover antes da entrega final
-const vagaTeste = new Vaga('NewTech', 'Dev Jr', ['JavaScript', 'GitHub'], 2700, 'Remoto');
-const vagaTeste1 = new Vaga('JockPower', 'Fullstack', ['JavaScript', 'Kanban'], 3000, 'Presencial');
-const vagaTeste2 = new Vaga('NextSolutions', 'Programador Front-End', ['JavaScript', 'Arrays', 'Objetos', 'Funções'], 3500, 'Híbrido');
-const vagaTeste3 = new Vaga('LabsCode', 'Estágio Front-End', ['JavaScript', 'React', 'GitHub', 'Kanban'], 1500, 'Presencial');
-const vagaTeste4 = new Vaga('DevMais', 'Front-End Pleno', ['JavaScript', 'Kanban', 'GitHub'], 4200, 'Remoto');
-const vagaTeste5 = new VagaFrontEnd('DevMenos', 'Front-End Junior', ['React', 'Vue', 'GitHub'], 1000, 'Remoto', 'Junior');
+//const vagaTeste = new Vaga('NewTech', 'Dev Jr', ['JavaScript', 'GitHub'], 2700, 'Remoto');
+//const vagaTeste1 = new Vaga('JockPower', 'Fullstack', ['JavaScript', 'Kanban'], 3000, 'Presencial');
+//const vagaTeste2 = new Vaga('NextSolutions', 'Programador Front-End', ['JavaScript', 'Arrays', 'Objetos', 'Funções'], 3500, 'Híbrido');
+//const vagaTeste3 = new Vaga('LabsCode', 'Estágio Front-End', ['JavaScript', 'React', 'GitHub', 'Kanban'], 1500, 'Presencial');
+//const vagaTeste4 = new Vaga('DevMais', 'Front-End Pleno', ['JavaScript', 'Kanban', 'GitHub'], 4200, 'Remoto');
+//const vagaTeste5 = new VagaFrontEnd('DevMenos', 'Front-End Junior', ['React', 'Vue', 'GitHub'], 1000, 'Remoto', 'Junior');
 
-const todasVagas = [vagaTeste, vagaTeste1, vagaTeste2, vagaTeste3, vagaTeste4, vagaTeste5];
-const candidatoComExperiencia = { habilidades: ['JavaScript', 'Kanban',], experienciaMeses: 3 };
-console.log(vagaTeste5.verificarNivelCompativel(candidatoComExperiencia));
+//const todasVagas = [vagaTeste, vagaTeste1, vagaTeste2, vagaTeste3, vagaTeste4, vagaTeste5];
+//const candidatoComExperiencia = { habilidades: ['JavaScript', 'Kanban',], experienciaMeses: 3 };
+//console.log(vagaTeste5.verificarNivelCompativel(candidatoComExperiencia));
+
+
+
+export { Vaga, VagaFrontEnd, encontreMelhorVaga, mapearHabilidadesFaltantes }
