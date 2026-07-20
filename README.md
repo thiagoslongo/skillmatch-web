@@ -66,4 +66,4 @@ skillmatch-web/
 - Deploy no GitHub Pages
 
 ## Link do vídeo explicando o projeto
-[cole aqui depois de gravar]
+Link: https://youtu.be/Imqe1uBVqe4 
