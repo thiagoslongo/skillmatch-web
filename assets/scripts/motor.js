@@ -1,7 +1,3 @@
-let maiorCompatibilidade = 0;
-let melhorVaga;
-let recomendacaoEstudo = [];
-
 class Vaga {
     constructor(empresa, cargo, requisitos, salario, modalidade) {
         this.empresa = empresa;
@@ -90,23 +86,5 @@ class VagaFrontEnd extends Vaga {
         return { experienciaCandidato }
     }
 }
-
-// TODO: callback/closure vai aqui quando escrever o main.js
-
-
-
-// TODO: dados de teste - remover antes da entrega final
-//const vagaTeste = new Vaga('NewTech', 'Dev Jr', ['JavaScript', 'GitHub'], 2700, 'Remoto');
-//const vagaTeste1 = new Vaga('JockPower', 'Fullstack', ['JavaScript', 'Kanban'], 3000, 'Presencial');
-//const vagaTeste2 = new Vaga('NextSolutions', 'Programador Front-End', ['JavaScript', 'Arrays', 'Objetos', 'Funções'], 3500, 'Híbrido');
-//const vagaTeste3 = new Vaga('LabsCode', 'Estágio Front-End', ['JavaScript', 'React', 'GitHub', 'Kanban'], 1500, 'Presencial');
-//const vagaTeste4 = new Vaga('DevMais', 'Front-End Pleno', ['JavaScript', 'Kanban', 'GitHub'], 4200, 'Remoto');
-//const vagaTeste5 = new VagaFrontEnd('DevMenos', 'Front-End Junior', ['React', 'Vue', 'GitHub'], 1000, 'Remoto', 'Junior');
-
-//const todasVagas = [vagaTeste, vagaTeste1, vagaTeste2, vagaTeste3, vagaTeste4, vagaTeste5];
-//const candidatoComExperiencia = { habilidades: ['JavaScript', 'Kanban',], experienciaMeses: 3 };
-//console.log(vagaTeste5.verificarNivelCompativel(candidatoComExperiencia));
-
-
 
 export { Vaga, VagaFrontEnd, encontreMelhorVaga, mapearHabilidadesFaltantes }

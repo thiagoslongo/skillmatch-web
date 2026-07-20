@@ -1,6 +1,22 @@
 import { buscarVagas, salvarCandidato, carregaCandidato } from './dados.js';
 import { encontreMelhorVaga, mapearHabilidadesFaltantes } from './motor.js';
 
+function criarContadorDeanalises(){
+    let total = 0;
+
+    return function() {
+        total++;
+        return total;
+    };
+}
+
+function finalizarAnalise(nomeCandidato, callback) {
+    console.log('Análise Finalizada');
+    callback(nomeCandidato);
+}
+
+const contarAnalise = criarContadorDeanalises();
+
 const campoForm = document.getElementById("form-candidato");
 
 campoForm.addEventListener("submit", async (evento) => {
@@ -44,6 +60,11 @@ campoForm.addEventListener("submit", async (evento) => {
     console.log(registroCandidato);
     salvarCandidato(registroCandidato);
 
+    finalizarAnalise(registroCandidato.nome, (nome) => {
+        const totalAnalises = contarAnalise();
+        console.log(`Analise de ${nome} concluída. Total de análises nessa sessão: ${totalAnalises}`);
+    });
+
     const cardMensagemStatus = document.getElementById('status-mensagem');
     cardMensagemStatus.innerText = "Carregando Vagas...";
 
@@ -61,6 +82,8 @@ campoForm.addEventListener("submit", async (evento) => {
         cardResumoVaga.innerText = `${umaVaga.cargo}, ${umaVaga.empresa}, ${resultadoCompatibilidade.compatibilidade}, ${resultadoCompatibilidade.classificacao}, ${resultadoCompatibilidade.habilidadesFaltantes}, ${resultadoCompatibilidade.habilidadesEncontradas}`;
         listaVagasContainer.append(cardResumoVaga);
     });
+    
+    cardMensagemStatus.innerText = "";
 
     const melhorVagaEncontrada = encontreMelhorVaga(retornoVagas, registroCandidato);
 
@@ -92,3 +115,4 @@ if (dadosCarregadosCandidato === null) {
         }
     });
 }
+
