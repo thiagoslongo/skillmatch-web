@@ -48,6 +48,10 @@ campoForm.addEventListener("submit", async (evento) => {
     cardMensagemStatus.innerText = "Carregando Vagas...";
 
     const retornoVagas = await buscarVagas();
+    if(!retornoVagas || retornoVagas.length === 0) {
+        cardMensagemStatus.innerText = "Erro ao buscar uma vaga...";
+        return;
+    }
 
     const listaVagasContainer = document.getElementById('lista-vagas');
 
